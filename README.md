@@ -9,7 +9,7 @@ Text diff for office files: doc,odt,docx,pdf,xls,xlsx,ods,rtf.
 
 Usage: officediff FILE1 FILE2
 
-This script convert it to text and then compare it using diff tool (meld).
+This script convert office (binary) files to plain text and then compare it using diff tool (meld).
 There are a lot of dependencies:
  * catdoc for rtf (you can use it for doc also, but I prefer antiword)
  * pdf2txt for pdf (packet: python-pdfminer)
