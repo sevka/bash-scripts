@@ -21,8 +21,7 @@ Actually, you can use only unoconv for all conversions but it pretty slow.
 
 Command to install all dependencies in Ubuntu:
 
-  sudo apt-get install odt2txt python-pdfminer catdoc antiword unoconv
-
-
+    sudo apt-get install odt2txt python-pdfminer catdoc antiword unoconv
+    
 I use it in Eclipse locally and in SVN plugin Subversive. Subversive have a function 'External diff'.
 In the Eclipse you have to install plugin: External diff tool (http://sourceforge.net/projects/externaldiff/?source=dlp)
