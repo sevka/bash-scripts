@@ -25,5 +25,4 @@ Command to install all dependencies in Ubuntu:
 
 
 I use it in Eclipse locally and in SVN plugin Subversive. Subversive have a function 'External diff'.
-In the Eclipse you have to install plugin install this plugin:
-External diff tool (http://sourceforge.net/projects/externaldiff/?source=dlp)
+In the Eclipse you have to install plugin: External diff tool (http://sourceforge.net/projects/externaldiff/?source=dlp)
