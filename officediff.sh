@@ -46,7 +46,6 @@ if [ $RESULT -ne 0 ]; then
     echo "Error!"
     exit 1
 fi
-#`$DIFF_TOOL ./tmp1.txt ./tmp2.txt`
 
 $DIFF_TOOL "/tmp/$filename1" "/tmp/$filename2"
 
