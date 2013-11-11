@@ -1,6 +1,9 @@
 #!/bin/bash
 DIFF_TOOL=/usr/bin/meld
 #DIFF_TOOL="diff -y -w" 
+
+TEMP_DIR=$(mktemp -d)
+
 if [[ -z "$1" || -z "$2" || "$1" == "-h" || "$1" == "--help" ]]; then
     echo "Usage: $0 FILE1 FILE2"
     exit 0
@@ -32,7 +35,7 @@ filename1=$(basename "$1").txt
 filename2=$(basename "$2").txt
 
 command=$(get_conv "$1")
-$command "$1" > "/tmp/$filename1"
+$command "$1" > "$TEMP_DIR/$filename1"
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
     echo "Error!"
@@ -40,14 +43,15 @@ if [ $RESULT -ne 0 ]; then
 fi
 
 command=$(get_conv "$2")
-$command "$2" > "/tmp/$filename2"
+$command "$2" > "$TEMP_DIR/$filename2"
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
     echo "Error!"
     exit 1
 fi
 
-$DIFF_TOOL "/tmp/$filename1" "/tmp/$filename2"
+$DIFF_TOOL "$TEMP_DIR/$filename1" "$TEMP_DIR/$filename2"
 
-rm "/tmp/$filename1"
-rm "/tmp/$filename2"
+rm "$TEMP_DIR/$filename1"
+rm "$TEMP_DIR/$filename2"
+rmdir "$TEMP_DIR"
