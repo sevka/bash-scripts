@@ -31,8 +31,8 @@ function get_conv {
 	exit 1
     fi
 }
-filename1=$(basename "$1").txt
-filename2=$(basename "$2").txt
+filename1=$(basename "$1")_1.txt
+filename2=$(basename "$2")_2.txt
 
 command=$(get_conv "$1")
 $command "$1" > "$TEMP_DIR/$filename1"
