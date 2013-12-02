@@ -23,5 +23,7 @@ Command to install all dependencies in Ubuntu:
 
     sudo apt-get install odt2txt python-pdfminer catdoc antiword unoconv
     
-I use it in Eclipse locally and in SVN plugin Subversive. Subversive have a function 'External diff'.
-In the Eclipse you have to install plugin: External diff tool (http://sourceforge.net/projects/externaldiff/?source=dlp)
+I use it in Eclipse locally and in plugin Subversive for comparing files from SVN. Subversive have a function 'External diff'.
+To compare your local files in the pure Eclipse you have to install plugin: 
+
+External diff tool (http://sourceforge.net/projects/externaldiff/?source=dlp)
